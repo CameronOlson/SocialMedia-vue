@@ -27,5 +27,32 @@ class PostsService {
     AppState.posts = res.data.posts.map(p => new Post(p))
     logger.log(res)
   }
+
+  async likePost(postId) {
+    const res = await api.post('api/posts/' + postId + '/like')
+    logger.log('PostsService res', res.data)
+  }
+
+  async deletePost(postId) {
+    const res = await api.delete(`api/posts/${postId}`)
+    logger.log(res)
+    AppState.posts = AppState.posts.filter(p => p.id !== postId)
+  }
+
+  async getOlderPosts(page) {
+    const pageNumber = page += 1
+    const res = await api.get(`api/posts/?page=${pageNumber}`)
+    logger.log('this is the get older post function from the posts service', res)
+    AppState.posts = res.data.posts.map(p => new Post(p))
+    AppState.currentPage = page
+  }
+
+  async getNewerPosts(page) {
+    page -= 1
+    const res = await api.get(`api/posts/?page=${page}`)
+    logger.log('this is the get newer post function from postsService', res)
+    AppState.posts = res.data.posts.map(p => new Post(p))
+    AppState.currentPage = page
+  }
 }
 export const postsService = new PostsService()

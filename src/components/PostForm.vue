@@ -1,16 +1,6 @@
 <template>
   <form @submit.prevent="createPost()">
     <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text"
-             class="form-control bg-light"
-             name="title"
-             placeholder="Title...."
-             v-model="editable.title"
-             required
-      >
-    </div>
-    <div class="form-group">
       <label for="title">Img Url</label>
       <input type="text"
              class="form-control bg-light"
