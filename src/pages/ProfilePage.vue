@@ -5,7 +5,14 @@
         <div class="col-12">
           <div class="row cover-img text-center" :style="{backgroundImage: `url(${profile.coverImg})`}">
             <span>
-              <h1 class="text-outlined">{{ profile.name }}</h1>
+              <h1 class="text-outlined">{{ profile.name }}
+                <div v-if="profile.graduated == true">
+                  <p class="mdi mdi-school">
+                  </p>
+                </div>
+                <div v-if="profile.graduated == false">
+                </div>
+              </h1>
               <img class="small-boy" :src="profile.picture" alt="">
             </span>
           </div>
@@ -13,6 +20,7 @@
             <p>{{ profile.bio }}</p>
             <a :href="profile.github" class="text-dark"><i class="mdi mdi-github selectable f-20"></i></a>
             <a :href="profile.linkedin" class="text-dark"><i class="mdi mdi-linkedin selectable f-20"></i></a>
+            <p>{{ profile.class }}</p>
             <p>{{ profile.about }}</p>
           </div>
           <!-- TODO come put in profile info  -->

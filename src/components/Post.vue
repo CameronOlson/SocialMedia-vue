@@ -17,7 +17,7 @@
       </div>
       <div>
         <p id="txtDate">
-          Posted At {{ post.creator.createdAt }}
+          Posted At {{ post.createdAt }}
         </p>
       </div>
     </div>

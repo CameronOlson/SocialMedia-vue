@@ -9,5 +9,6 @@ export class Post {
     this.creator = data.creator || {}
     this.likes = data.likes
     this.likeIds = data.likeIds
+    this.createdAt = new Date(data.createdAt).toLocaleString()
   }
 }
