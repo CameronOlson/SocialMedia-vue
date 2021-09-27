@@ -22,7 +22,7 @@
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-success mt-2">
-        Create Project
+        Create Post
       </button>
     </div>
   </form>

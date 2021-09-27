@@ -1,26 +1,28 @@
 <template>
-  <header>
-    <Navbar />
-  </header>
-  <main>
-    <router-view />
-  </main>
-  <footer>
-    <div>
-      <PageChanger />
-    </div>
-    <div>
-      <Ads v-for="a in ads" :key="a.id" :ad="a" />
-    </div>
-  </footer>
-  <Modal id="post-form">
-    <template #modal-title>
-      <h4>Post Form</h4>
-    </template>
-    <template #modal-body>
-      <PostForm />
-    </template>
-  </Modal>
+  <div class="background-vue">
+    <header>
+      <Navbar />
+    </header>
+    <main>
+      <router-view />
+    </main>
+    <footer>
+      <div>
+        <PageChanger />
+      </div>
+      <div>
+        <Ads v-for="a in ads" :key="a.id" :ad="a" />
+      </div>
+    </footer>
+    <Modal id="post-form">
+      <template #modal-title>
+        <h4>Post Form</h4>
+      </template>
+      <template #modal-body>
+        <PostForm />
+      </template>
+    </Modal>
+  </div>
 </template>
 
 <script>
@@ -50,5 +52,8 @@ export default {
 
 .short{
   height: 10rem;
+}
+.background-vue{
+  background-color: rgb(92, 221, 221);
 }
 </style>

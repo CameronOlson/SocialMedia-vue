@@ -1,10 +1,14 @@
 <template>
-  <div class="row">
-    <div class="col-1"></div>
-    <div class="col-10">
-      <img :src="ad.banner" alt="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card my-card my-2 p-4">
+          <div class="card-body">
+            <img :src="ad.square" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-1"></div>
   </div>
 </template>
 
@@ -33,5 +37,9 @@ export default {
 </script>
 
 <style>
+.my-card{
+  background-color: rgb(3, 39, 21);
+  color: aliceblue;
+}
 
 </style>

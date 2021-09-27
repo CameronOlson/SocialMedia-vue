@@ -62,7 +62,8 @@ export default {
 }
 
 .small-boy {
-  width: 80px;
+  width: 22vh;
+  height: 22vh;
   border-radius: 50%;
 }
 </style>

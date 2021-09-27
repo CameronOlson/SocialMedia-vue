@@ -11,7 +11,8 @@
           </div>
           <div class="col-12">
             <p>{{ profile.bio }}</p>
-            <p>{{ profile.github }}</p>
+            <a :href="profile.github" class="text-dark"><i class="mdi mdi-github selectable f-20"></i></a>
+            <a :href="profile.linkedin" class="text-dark"><i class="mdi mdi-linkedin selectable f-20"></i></a>
             <p>{{ profile.about }}</p>
           </div>
           <!-- TODO come put in profile info  -->
@@ -27,7 +28,7 @@
       <Post v-for="p in posts" :key="p.id" :post="p" />
     </div>
     <div class="row" v-else>
-      <h3>No Porsts..... Very sad Much empty</h3>
+      <h3>You Should Post Some Stuff</h3>
     </div>
   </div>
 </template>

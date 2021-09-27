@@ -1,6 +1,11 @@
 <template>
   <div class="container-fluid">
     <div class="row">
+      <div class="col-12 text-center">
+        <h1>WELCOME TO THE INTERNET</h1>
+      </div>
+    </div>
+    <div class="row">
       <Post v-for="p in posts" :key="p.id" :post="p" />
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="col-12">
-    <div class="card my-card my-2 p-4">
+    <div class="card my-card my-2 p-4 card-shadow">
       <div class="card-body">
         <img :src="post.imgUrl" class="img-fluid rounded shadow">
       </div>
@@ -15,7 +15,11 @@
       <div v-if="account.id == post.creatorId">
         <i class="mdi mdi-delete selectable" @click="deletePost()"></i>
       </div>
-      <div><p>Posted At {{ post.creator.createdAt }}</p></div>
+      <div>
+        <p id="txtDate">
+          Posted At {{ post.creator.createdAt }}
+        </p>
+      </div>
     </div>
   </div>
 </template>

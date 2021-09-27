@@ -1,10 +1,12 @@
 <template>
-  <button @click="getNewerPosts()">
-    Newer Posts
-  </button>
-  <button @click="getOlderPosts()">
-    Older Posts
-  </button>
+  <div class="col-12 text-center my-4">
+    <button class="btn btn-primary mx-5" @click="getNewerPosts()">
+      Newer Posts
+    </button>
+    <button class="btn btn-primary mx-5" @click="getOlderPosts()">
+      Older Posts
+    </button>
+  </div>
 </template>
 
 <script>
