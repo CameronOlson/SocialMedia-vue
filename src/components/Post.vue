@@ -11,10 +11,7 @@
           <img :src="post.creator.picture" alt="picture should go here" class="img-fluid rounded shadow small-boy"></div>
         </span>
       </router-link>
-      <!-- TODO here is the likes thing -->
-
       <span><i class="mdi mdi-heart-outline selectable" @click="likePost()"></i><h6>{{ post.likes.length }}</h6></span>
-      <!-- <div> <p> {{ post.createdAt }} </p></div> -->
       <div v-if="account.id == post.creatorId">
         <i class="mdi mdi-delete selectable" @click="deletePost()"></i>
       </div>
@@ -64,7 +61,7 @@ export default {
   width: 60px
 }
 .my-card{
-  background-color: black;
+  background-color: rgb(3, 39, 21);
   color: aliceblue;
 }
 

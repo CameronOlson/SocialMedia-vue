@@ -5,7 +5,7 @@
         <div class="col-12">
           <div class="row cover-img text-center" :style="{backgroundImage: `url(${profile.coverImg})`}">
             <span>
-              <h1>{{ profile.name }}</h1>
+              <h1 class="text-outlined">{{ profile.name }}</h1>
               <img class="small-boy" :src="profile.picture" alt="">
             </span>
           </div>
@@ -78,4 +78,20 @@ export default {
   background-color: rgb(47, 54, 47);
   color: aliceblue;
 }
+
+.text-outlined{
+  color: white;
+  font-size: 40px;
+  -webkit-text-stroke: 1px black;
+}
+.strokeme
+{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
 </style>

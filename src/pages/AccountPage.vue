@@ -5,11 +5,15 @@
         <h3 class="text-light">
           {{ account.name }}
         </h3>
+        <div><img :src="account.picture" alt="some picture" class="small-boy"></div>
+        <p>{{ account.bio }}</p>
       </div>
       <div class="row text-center">
         <form @submit.prevent="updateAccount()">
-          <input type="text" v-model="account.coverImg">
-          <input type="text" v-model="account.name">
+          Cover Image<input type="text" v-model="account.coverImg">
+          Name <input type="text" v-model="account.name">
+          Bio <input type="text" v-model="account.bio">
+          Picture<input type="text" v-model="account.picture">
           <button class="btn btn-success ms-1">
             Submit
           </button>
@@ -55,5 +59,10 @@ export default {
 .cover-img{
   height: 30vh;
   background-position: center center;
+}
+
+.small-boy {
+  width: 80px;
+  border-radius: 50%;
 }
 </style>
